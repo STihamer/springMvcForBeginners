@@ -11,6 +11,8 @@
     <title>Welcome</title>
 </head>
 <body>
-Welcome  ${name}
+Welcome  ${name}  your password is ${password}
+<%--Valid user -> welcome.jsp
+invalid user -> login.jsp--%>
 </body>
 </html>
