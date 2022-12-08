@@ -16,11 +16,8 @@ public class LoginServlet extends HttpServlet {
 
         String name = request.getParameter("name");
         request.setAttribute("name", name);
-
+        request.setAttribute("password", request.getParameter("password"));
         request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);
-
-
-
        /* PrintWriter writer = response.getWriter();
         writer.println("<html>");
         writer.println("<head>");
@@ -30,5 +27,12 @@ public class LoginServlet extends HttpServlet {
         writer.println("<h1>My first servlet<h1>");
         writer.println("</body>");
         writer.println("<html>");*/
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException,
+            IOException {
+        request.setAttribute("name", request.getParameter("name"));
+        request.getRequestDispatcher("/WEB-INF/views/welcome.jsp").forward(request, response);
     }
 }

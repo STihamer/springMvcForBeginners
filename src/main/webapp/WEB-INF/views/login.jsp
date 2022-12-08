@@ -12,13 +12,22 @@
 <head>
     <title>Yahoo!!! From JSP</title>
 </head>
-<% //scriplet
+<%
+    //scriplet
     System.out.println(request.getParameter("name"));
     Date date = new Date();
 
 %>
-<div>Current date is <%=date%></div> //<%=date%> scriplet expression
+<div>Current date is <%=date%></div>
+<%--//<%=date%> scriplet expression--%>
 <body>
-My First JSP ${name} //expression language
+My First JSP ${name} and password is ${password}
+<%--//expression language--%>
+
+<form action="/login.do" method="post">
+    Enter your name
+    <input text="text" name = "name"/>
+    <input type="submit" value="Login">
+</form>
 </body>
 </html>
