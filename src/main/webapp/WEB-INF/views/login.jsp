@@ -15,7 +15,7 @@
 <%--//<%=date%> scriplet expression--%>
 <body>
 
-<form action="/login.do" method="post">
+<form action="/login" method="post">
 
     <p><font color="red">${errorMessage}</font></p>
 

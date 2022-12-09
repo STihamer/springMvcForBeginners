@@ -12,7 +12,7 @@
 </head>
 <body>
 Welcome  ${name}  your password is ${password}
-<%--Valid user -> welcome.jsp
-invalid user -> login.jsp--%>
+
+Now you can <a href="/list-todos">manage your todo s</a>
 </body>
 </html>
